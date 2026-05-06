@@ -21,7 +21,7 @@ const coreMembers = [
   },
   {
     name: "Juan Varengo",
-    role: "Co-founder / Analista",
+    role: "Co-founder / Analista Funcional",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Juan_Varengo-7O3qDZFv9bleMumYQswWDteu5VFxds.png",
     linkedin: "https://www.linkedin.com/in/juanignaciovarengobossi/",
     bio: "Especializado en bajar la idea del cliente a diagramas que escalen el sistema de 0 a 100.",
@@ -134,7 +134,7 @@ export function Team() {
   const inView = useInView(ref, { once: true, margin: "-60px" })
 
   return (
-    <section id="equipo" className="py-24 px-6">
+    <section id="equipo" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -142,10 +142,10 @@ export function Team() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16 pb-6 border-b border-border/40"
+          className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-6 mb-12 sm:mb-16 pb-4 sm:pb-6 border-b border-border/40"
         >
           <div>
-            <span className="text-[10px] tracking-[0.3em] text-neon uppercase font-mono">
+            <span className="text-[9px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.3em] text-neon uppercase font-mono">
               El equipo
             </span>
             <h2 className="mt-3 text-4xl sm:text-6xl font-black text-foreground uppercase tracking-tight leading-none">

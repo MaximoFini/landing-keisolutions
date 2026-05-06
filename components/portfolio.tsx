@@ -55,17 +55,17 @@ function ProjectRow({
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="group grid grid-cols-[auto_1fr_auto] gap-6 lg:gap-10 py-8 items-start border-b border-border/40 last:border-0 hover:bg-surface/50 -mx-4 px-4 transition-colors rounded-sm cursor-default"
+      className="group grid grid-cols-1 sm:grid-cols-[auto_1fr_auto] gap-4 sm:gap-6 lg:gap-10 py-6 sm:py-8 items-start border-b border-border/40 last:border-0 hover:bg-surface/50 -mx-2 sm:-mx-4 px-2 sm:px-4 transition-colors rounded-sm cursor-default"
     >
       {/* Number */}
-      <span className="text-xs font-mono text-muted-foreground pt-1 w-6">
+      <span className="text-xs font-mono text-muted-foreground pt-1 w-6 hidden sm:block">
         {project.num}
       </span>
 
       {/* Content */}
-      <div className="flex flex-col lg:flex-row lg:items-start gap-4 lg:gap-12">
+      <div className="flex flex-col lg:flex-row lg:items-start gap-3 sm:gap-4 lg:gap-12">
         <div className="lg:w-52 flex-shrink-0">
-          <h3 className="text-lg font-bold text-foreground group-hover:text-neon transition-colors">
+          <h3 className="text-base sm:text-lg font-bold text-foreground group-hover:text-neon transition-colors">
             {project.title}
           </h3>
           <p className="text-[10px] font-mono text-muted-foreground mt-1 tracking-wide">
@@ -78,13 +78,13 @@ function ProjectRow({
       </div>
 
       {/* Year + tags + arrow */}
-      <div className="flex flex-col items-end gap-3">
+      <div className="flex flex-row sm:flex-col items-center sm:items-end gap-3 justify-between sm:justify-start">
         <span className="text-xs font-mono text-muted-foreground">{project.year}</span>
-        <div className="hidden lg:flex flex-wrap justify-end gap-1.5 max-w-[160px]">
+        <div className="flex sm:hidden lg:flex flex-wrap justify-end gap-1.5 max-w-[160px]">
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="px-2 py-0.5 text-[10px] tracking-wider font-mono border border-border text-muted-foreground rounded-sm"
+              className="px-2 py-0.5 text-[9px] sm:text-[10px] tracking-wider font-mono border border-border text-muted-foreground rounded-sm"
             >
               {tag}
             </span>
@@ -101,7 +101,7 @@ export function Portfolio() {
   const inView = useInView(ref, { once: true, margin: "-60px" })
 
   return (
-    <section id="proyectos" className="py-24 px-6 bg-surface/20">
+    <section id="proyectos" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-surface/20">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -109,13 +109,13 @@ export function Portfolio() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16 pb-6 border-b border-border/40"
+          className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-6 mb-12 sm:mb-16 pb-4 sm:pb-6 border-b border-border/40"
         >
           <div>
-            <span className="text-[10px] tracking-[0.3em] text-neon uppercase font-mono">
+            <span className="text-[9px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.3em] text-neon uppercase font-mono">
               Proyectos
             </span>
-            <h2 className="mt-3 text-4xl sm:text-6xl font-black text-foreground uppercase tracking-tight leading-none">
+            <h2 className="mt-2 sm:mt-3 text-3xl sm:text-5xl lg:text-6xl font-black text-foreground uppercase tracking-tight leading-none">
               Trabajo<br />real
             </h2>
           </div>

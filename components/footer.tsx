@@ -1,21 +1,22 @@
 import Image from "next/image"
-import { Github, Linkedin } from "lucide-react"
+import { Linkedin } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/40 py-10 px-6">
+    <footer className="border-t border-border/40 py-8 sm:py-10 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 sm:gap-8">
           {/* Logo + tagline */}
-          <div className="flex flex-col gap-3">
-            <a href="#" className="flex items-center gap-3">
+          <div className="flex flex-col gap-2 sm:gap-3">
+            <a href="#" className="flex items-center gap-2 sm:gap-3">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo_principal-removebg-preview%20%281%29-65uflcVgzVsTIrqnApVUwM1VXjJKeV.png"
+                src="/logo.png"
                 alt="Keii Solutions logo"
                 width={32}
                 height={32}
+                className="w-7 h-7 sm:w-8 sm:h-8"
               />
-              <span className="font-bold text-foreground tracking-tight">
+              <span className="font-bold text-sm sm:text-base text-foreground tracking-tight">
                 Keii <span className="text-neon">Solutions</span>
               </span>
             </a>
@@ -25,11 +26,11 @@ export function Footer() {
           </div>
 
           {/* Nav */}
-          <nav className="flex flex-wrap gap-6" aria-label="Footer navigation">
+          <nav className="flex flex-wrap gap-4 sm:gap-6" aria-label="Footer navigation">
             {[
               { label: "Servicios", href: "#servicios" },
+              { label: "Proceso", href: "#proceso" },
               { label: "Proyectos", href: "#proyectos" },
-              { label: "Equipo", href: "#equipo" },
               { label: "Contacto", href: "#contacto" },
             ].map((link) => (
               <a
@@ -43,10 +44,10 @@ export function Footer() {
           </nav>
 
           {/* Social + contact */}
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
             <a
               href="mailto:keiisolutions2@gmail.com"
-              className="text-xs text-muted-foreground hover:text-neon transition-colors font-mono"
+              className="text-xs text-muted-foreground hover:text-neon transition-colors font-mono break-all"
             >
               keiisolutions2@gmail.com
             </a>
@@ -59,17 +60,10 @@ export function Footer() {
             >
               <Linkedin className="w-3.5 h-3.5" />
             </a>
-            <a
-              href="#"
-              aria-label="GitHub"
-              className="w-8 h-8 rounded-sm border border-border flex items-center justify-center text-muted-foreground hover:text-neon hover:border-neon/50 transition-colors"
-            >
-              <Github className="w-3.5 h-3.5" />
-            </a>
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-border/30 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-border/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
           <p className="text-[11px] text-muted-foreground">
             &copy; {new Date().getFullYear()} Keii Solutions. Todos los derechos reservados.
           </p>

@@ -7,8 +7,9 @@ import Image from "next/image"
 
 const navLinks = [
   { label: "Servicios", href: "#servicios" },
+  { label: "Proceso", href: "#proceso" },
   { label: "Proyectos", href: "#proyectos" },
-  { label: "Equipo", href: "#equipo" },
+  { label: "Blog", href: "/blog" },
   { label: "Contacto", href: "#contacto" },
 ]
 
@@ -30,16 +31,17 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
+        <a href="#" className="flex items-center gap-2 sm:gap-3 group">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo_principal-removebg-preview%20%281%29-65uflcVgzVsTIrqnApVUwM1VXjJKeV.png"
+            src="/logo.png"
             alt="Keii Solutions logo"
-            width={36}
-            height={36}
+            width={32}
+            height={32}
+            className="w-8 h-8 sm:w-9 sm:h-9"
           />
-          <span className="font-bold text-base tracking-tight text-foreground">
+          <span className="font-bold text-sm sm:text-base tracking-tight text-foreground">
             Keii <span className="text-neon">Solutions</span>
           </span>
         </a>
@@ -61,7 +63,7 @@ export function Navbar() {
         {/* CTA */}
         <a
           href="#contacto"
-          className="hidden md:inline-flex items-center gap-2 px-5 py-2 rounded-sm bg-neon text-foreground text-sm font-bold tracking-wide hover:bg-neon-bright transition-colors"
+          className="hidden md:inline-flex items-center gap-2 px-4 lg:px-5 py-2 rounded-sm bg-neon text-foreground text-xs lg:text-sm font-bold tracking-wide hover:bg-neon-bright transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-md hover:shadow-neon/20"
         >
           Consulta gratis
         </a>
@@ -91,17 +93,17 @@ export function Navbar() {
                   <a
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide"
+                    className="text-base text-muted-foreground hover:text-foreground transition-colors tracking-wide block py-1"
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
-              <li>
+              <li className="pt-2">
                 <a
                   href="#contacto"
                   onClick={() => setMenuOpen(false)}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm bg-neon text-foreground text-sm font-bold"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-sm bg-neon text-foreground text-sm font-bold w-full"
                 >
                   Consulta gratis
                 </a>
