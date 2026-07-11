@@ -1,4 +1,4 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from "next";
 
 /**
  * Robots.txt optimizado para SEO
@@ -8,17 +8,17 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/api/', '/private/'],
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/api/", "/private/"],
       },
       {
-        userAgent: 'Googlebot',
-        allow: '/',
-        disallow: ['/api/', '/private/'],
+        userAgent: "Googlebot",
+        allow: "/",
+        disallow: ["/api/", "/private/"],
       },
     ],
-    sitemap: 'https://keiisolutions.com/sitemap.xml',
-    host: 'https://keiisolutions.com',
-  }
+    sitemap: "https://keiisolutions.com/sitemap.xml",
+    host: "https://keiisolutions.com",
+  };
 }

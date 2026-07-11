@@ -1,32 +1,36 @@
-import { Metadata } from 'next'
-import Link from 'next/link'
-import { ArrowRight, Calendar, Clock } from 'lucide-react'
-import { getAllPosts, getFeaturedPosts } from '@/lib/blog'
+import { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { getAllPosts, getFeaturedPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: 'Blog de Desarrollo y Tecnología',
-  description: 'Artículos sobre desarrollo de software, inteligencia artificial, automatización y mejores prácticas de programación.',
+  title: "Blog de Desarrollo y Tecnología",
+  description:
+    "Artículos sobre desarrollo de software, inteligencia artificial, automatización y mejores prácticas de programación.",
   alternates: {
-    canonical: 'https://keiisolutions.com/blog',
+    canonical: "https://keiisolutions.com/blog",
   },
   openGraph: {
-    title: 'Blog | Keii Solutions',
-    description: 'Artículos sobre desarrollo de software, IA y automatización',
-    url: 'https://keiisolutions.com/blog',
+    title: "Blog | Keii Solutions",
+    description: "Artículos sobre desarrollo de software, IA y automatización",
+    url: "https://keiisolutions.com/blog",
   },
-}
+};
 
 export default function BlogPage() {
-  const allPosts = getAllPosts()
-  const featuredPosts = getFeaturedPosts()
-  const regularPosts = allPosts.filter(post => !post.featured)
+  const allPosts = getAllPosts();
+  const featuredPosts = getFeaturedPosts();
+  const regularPosts = allPosts.filter((post) => !post.featured);
 
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
-          <Link href="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-neon transition-colors">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-neon transition-colors"
+          >
             ← Volver al inicio
           </Link>
         </div>
@@ -46,7 +50,8 @@ export default function BlogPage() {
             <span className="text-neon">Conocimiento</span>
           </h1>
           <p className="max-w-2xl text-muted-foreground text-lg leading-relaxed">
-            Exploramos desarrollo de software, IA, automatización y las tecnologías que están transformando la industria.
+            Exploramos desarrollo de software, IA, automatización y las
+            tecnologías que están transformando la industria.
           </p>
         </div>
       </section>
@@ -84,7 +89,11 @@ export default function BlogPage() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-xs text-muted-foreground">
                       <Calendar className="w-3 h-3" />
-                      {new Date(post.date).toLocaleDateString('es-AR', { year: 'numeric', month: 'long', day: 'numeric' })}
+                      {new Date(post.date).toLocaleDateString("es-AR", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
                     </div>
                     <ArrowRight className="w-4 h-4 text-neon opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
@@ -130,7 +139,10 @@ export default function BlogPage() {
                   <div className="flex items-center gap-3 sm:flex-col sm:items-end sm:gap-2">
                     <div className="flex items-center gap-2 text-xs text-muted-foreground whitespace-nowrap">
                       <Calendar className="w-3 h-3" />
-                      {new Date(post.date).toLocaleDateString('es-AR', { month: 'short', day: 'numeric' })}
+                      {new Date(post.date).toLocaleDateString("es-AR", {
+                        month: "short",
+                        day: "numeric",
+                      })}
                     </div>
                     <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-neon transition-colors" />
                   </div>
@@ -141,5 +153,5 @@ export default function BlogPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

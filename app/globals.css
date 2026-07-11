@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -83,8 +83,8 @@
   --color-neon-dim: var(--neon-dim);
   --color-surface: var(--surface);
   --color-surface-elevated: var(--surface-elevated);
-  --font-sans: 'Geist', 'Geist Fallback';
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -344,13 +344,12 @@ body {
   .blog-content table {
     font-size: 0.875rem;
   }
-  
+
   .blog-content th,
   .blog-content td {
     padding: 0.5rem;
   }
 }
-
 
 /* Safe area insets for notched devices */
 @supports (padding: max(0px)) {
@@ -372,7 +371,8 @@ body {
 /* Micro-interacciones sutiles */
 @layer utilities {
   /* Transiciones suaves para todos los botones */
-  button, a[href] {
+  button,
+  a[href] {
     @apply transition-all duration-300 ease-out;
   }
 
@@ -383,7 +383,8 @@ body {
 
   /* Animación de pulso muy sutil */
   @keyframes subtle-pulse {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 1;
     }
     50% {
@@ -392,12 +393,14 @@ body {
   }
 
   /* Efecto de brillo sutil en foco */
-  input:focus, textarea:focus {
+  input:focus,
+  textarea:focus {
     @apply ring-2 ring-neon/30;
   }
 
   /* Cursor con feedback táctil */
-  button:active, a:active {
+  button:active,
+  a:active {
     transform: scale(0.98);
   }
 }

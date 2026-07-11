@@ -1,30 +1,32 @@
-import { Metadata } from 'next'
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
-import { Calendar, Clock, ArrowLeft, Tag } from 'lucide-react'
-import { getPostBySlug, getRelatedPosts, getAllPosts } from '@/lib/blog'
+import { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { Calendar, Clock, ArrowLeft, Tag } from "lucide-react";
+import { getPostBySlug, getRelatedPosts, getAllPosts } from "@/lib/blog";
 
 interface PageProps {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }
 
 // Generate static params for all blog posts
 export async function generateStaticParams() {
-  const posts = getAllPosts()
+  const posts = getAllPosts();
   return posts.map((post) => ({
     slug: post.slug,
-  }))
+  }));
 }
 
 // Generate metadata for each post
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params
-  const post = getPostBySlug(slug)
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
 
   if (!post) {
     return {
-      title: 'Post no encontrado',
-    }
+      title: "Post no encontrado",
+    };
   }
 
   return {
@@ -38,27 +40,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: post.title,
       description: post.excerpt,
       url: `https://keiisolutions.com/blog/${post.slug}`,
-      type: 'article',
+      type: "article",
       publishedTime: post.date,
       authors: [post.author.name],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
     },
-  }
+  };
 }
 
 export default async function BlogPostPage({ params }: PageProps) {
-  const { slug } = await params
-  const post = getPostBySlug(slug)
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
 
   if (!post) {
-    notFound()
+    notFound();
   }
 
-  const relatedPosts = getRelatedPosts(post.slug, post.category)
+  const relatedPosts = getRelatedPosts(post.slug, post.category);
 
   return (
     <div className="min-h-screen bg-background">
@@ -95,10 +97,10 @@ export default async function BlogPostPage({ params }: PageProps) {
           <div className="flex flex-wrap items-center gap-4 sm:gap-6 pb-8 mb-8 border-b border-border/40">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Calendar className="w-4 h-4" />
-              {new Date(post.date).toLocaleDateString('es-AR', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
+              {new Date(post.date).toLocaleDateString("es-AR", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
               })}
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -106,7 +108,10 @@ export default async function BlogPostPage({ params }: PageProps) {
               {post.readTime}
             </div>
             <div className="text-sm text-muted-foreground">
-              Por <span className="text-foreground font-medium">{post.author.name}</span>
+              Por{" "}
+              <span className="text-foreground font-medium">
+                {post.author.name}
+              </span>
             </div>
           </div>
 
@@ -117,9 +122,11 @@ export default async function BlogPostPage({ params }: PageProps) {
 
           {/* Content */}
           <div className="prose prose-invert max-w-none">
-            <div 
+            <div
               className="blog-content"
-              dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br />') }}
+              dangerouslySetInnerHTML={{
+                __html: post.content.replace(/\n/g, "<br />"),
+              }}
             />
           </div>
 
@@ -129,7 +136,8 @@ export default async function BlogPostPage({ params }: PageProps) {
               ¿Listo para llevar tu proyecto al siguiente nivel?
             </h3>
             <p className="text-muted-foreground mb-6">
-              Conversemos sobre cómo podemos ayudarte a implementar estas soluciones en tu negocio.
+              Conversemos sobre cómo podemos ayudarte a implementar estas
+              soluciones en tu negocio.
             </p>
             <Link
               href="/#contacto"
@@ -171,5 +179,5 @@ export default async function BlogPostPage({ params }: PageProps) {
         </section>
       )}
     </div>
-  )
+  );
 }

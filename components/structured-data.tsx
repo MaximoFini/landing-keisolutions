@@ -4,162 +4,166 @@
  */
 export function StructuredData() {
   const websiteSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'Keii Solutions',
-    url: 'https://keiisolutions.com',
-    description: 'Desarrollamos software a medida, soluciones IA y automatización',
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Keii Solutions",
+    url: "https://keiisolutions.com",
+    description:
+      "Desarrollamos software a medida, soluciones IA y automatización",
     potentialAction: {
-      '@type': 'SearchAction',
+      "@type": "SearchAction",
       target: {
-        '@type': 'EntryPoint',
-        urlTemplate: 'https://keiisolutions.com/?s={search_term_string}',
+        "@type": "EntryPoint",
+        urlTemplate: "https://keiisolutions.com/?s={search_term_string}",
       },
-      'query-input': 'required name=search_term_string',
+      "query-input": "required name=search_term_string",
     },
-  }
+  };
 
   const organizationSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Keii Solutions',
-    url: 'https://keiisolutions.com',
-    logo: 'https://keiisolutions.com/logo.png',
-    description: 'Desarrollamos software a medida, soluciones IA y automatización con transparencia y calidad garantizada.',
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Keii Solutions",
+    url: "https://keiisolutions.com",
+    logo: "https://keiisolutions.com/logo.png",
+    description:
+      "Desarrollamos software a medida, soluciones IA y automatización con transparencia y calidad garantizada.",
     address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Córdoba',
-      addressCountry: 'AR',
+      "@type": "PostalAddress",
+      addressLocality: "Córdoba",
+      addressCountry: "AR",
     },
     contactPoint: {
-      '@type': 'ContactPoint',
-      email: 'keiisolutions2@gmail.com',
-      contactType: 'customer service',
-      availableLanguage: ['Spanish', 'English'],
+      "@type": "ContactPoint",
+      email: "keiisolutions2@gmail.com",
+      contactType: "customer service",
+      availableLanguage: ["Spanish", "English"],
     },
     sameAs: [
-      'https://github.com/keiisolutions',
-      'https://linkedin.com/company/keiisolutions',
+      "https://github.com/keiisolutions",
+      "https://linkedin.com/company/keiisolutions",
     ],
-  }
+  };
 
   const localBusinessSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
-    name: 'Keii Solutions',
-    description: 'Desarrollo de software a medida, inteligencia artificial y automatización',
-    url: 'https://keiisolutions.com',
-    telephone: '+54-9-351-XXXXXXX',
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Keii Solutions",
+    description:
+      "Desarrollo de software a medida, inteligencia artificial y automatización",
+    url: "https://keiisolutions.com",
+    telephone: "+54-9-351-XXXXXXX",
     address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Córdoba',
-      addressRegion: 'Córdoba',
-      addressCountry: 'AR',
+      "@type": "PostalAddress",
+      addressLocality: "Córdoba",
+      addressRegion: "Córdoba",
+      addressCountry: "AR",
     },
     geo: {
-      '@type': 'GeoCoordinates',
+      "@type": "GeoCoordinates",
       latitude: -31.4201,
       longitude: -64.1888,
     },
     openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '09:00',
-      closes: '18:00',
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:00",
     },
-    priceRange: '$$',
-  }
+    priceRange: "$$",
+  };
 
   const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    serviceType: 'Software Development',
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Software Development",
     provider: {
-      '@type': 'Organization',
-      name: 'Keii Solutions',
+      "@type": "Organization",
+      name: "Keii Solutions",
     },
     areaServed: {
-      '@type': 'Country',
-      name: 'Argentina',
+      "@type": "Country",
+      name: "Argentina",
     },
     hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Servicios de Desarrollo',
+      "@type": "OfferCatalog",
+      name: "Servicios de Desarrollo",
       itemListElement: [
         {
-          '@type': 'Offer',
+          "@type": "Offer",
           itemOffered: {
-            '@type': 'Service',
-            name: 'Desarrollo Web',
-            description: 'Aplicaciones modernas, escalables y de alto rendimiento',
+            "@type": "Service",
+            name: "Desarrollo Web",
+            description:
+              "Aplicaciones modernas, escalables y de alto rendimiento",
           },
         },
         {
-          '@type': 'Offer',
+          "@type": "Offer",
           itemOffered: {
-            '@type': 'Service',
-            name: 'Soluciones IA',
-            description: 'Modelos de lenguaje y visión artificial integrados',
+            "@type": "Service",
+            name: "Soluciones IA",
+            description: "Modelos de lenguaje y visión artificial integrados",
           },
         },
         {
-          '@type': 'Offer',
+          "@type": "Offer",
           itemOffered: {
-            '@type': 'Service',
-            name: 'Automatización',
-            description: 'Flujos que eliminan trabajo repetitivo',
+            "@type": "Service",
+            name: "Automatización",
+            description: "Flujos que eliminan trabajo repetitivo",
           },
         },
       ],
     },
-  }
+  };
 
   const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
     mainEntity: [
       {
-        '@type': 'Question',
-        name: '¿Cuánto tiempo toma desarrollar un proyecto de software?',
+        "@type": "Question",
+        name: "¿Cuánto tiempo toma desarrollar un proyecto de software?",
         acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'El tiempo varía según la complejidad. Proyectos simples pueden tomar 2-4 semanas, mientras que sistemas complejos pueden requerir 2-6 meses. Trabajamos con sprints ágiles para entregar valor incremental.',
+          "@type": "Answer",
+          text: "El tiempo varía según la complejidad. Proyectos simples pueden tomar 2-4 semanas, mientras que sistemas complejos pueden requerir 2-6 meses. Trabajamos con sprints ágiles para entregar valor incremental.",
         },
       },
       {
-        '@type': 'Question',
-        name: '¿Trabajan de forma remota?',
+        "@type": "Question",
+        name: "¿Trabajan de forma remota?",
         acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Sí, trabajamos 100% remoto con clientes de toda Argentina y el mundo. Tenemos nuestra base en Córdoba, Argentina.',
+          "@type": "Answer",
+          text: "Sí, trabajamos 100% remoto con clientes de toda Argentina y el mundo. Tenemos nuestra base en Córdoba, Argentina.",
         },
       },
       {
-        '@type': 'Question',
-        name: '¿Qué tecnologías utilizan?',
+        "@type": "Question",
+        name: "¿Qué tecnologías utilizan?",
         acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Utilizamos tecnologías modernas como Next.js, React, Node.js, Python, PostgreSQL, y servicios cloud. Seleccionamos la mejor stack según las necesidades de cada proyecto.',
+          "@type": "Answer",
+          text: "Utilizamos tecnologías modernas como Next.js, React, Node.js, Python, PostgreSQL, y servicios cloud. Seleccionamos la mejor stack según las necesidades de cada proyecto.",
         },
       },
       {
-        '@type': 'Question',
-        name: '¿Ofrecen soporte después del lanzamiento?',
+        "@type": "Question",
+        name: "¿Ofrecen soporte después del lanzamiento?",
         acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Sí, todos nuestros proyectos incluyen soporte post-lanzamiento. Ofrecemos mantenimiento continuo, actualizaciones y mejoras según lo necesites.',
+          "@type": "Answer",
+          text: "Sí, todos nuestros proyectos incluyen soporte post-lanzamiento. Ofrecemos mantenimiento continuo, actualizaciones y mejoras según lo necesites.",
         },
       },
       {
-        '@type': 'Question',
-        name: '¿Pueden integrar IA en mi producto?',
+        "@type": "Question",
+        name: "¿Pueden integrar IA en mi producto?",
         acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Sí, desarrollamos soluciones con modelos de lenguaje (LLMs), visión artificial, y automatización inteligente. Podemos integrar IA en productos nuevos o existentes.',
+          "@type": "Answer",
+          text: "Sí, desarrollamos soluciones con modelos de lenguaje (LLMs), visión artificial, y automatización inteligente. Podemos integrar IA en productos nuevos o existentes.",
         },
       },
     ],
-  }
+  };
 
   return (
     <>
@@ -173,7 +177,9 @@ export function StructuredData() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessSchema),
+        }}
       />
       <script
         type="application/ld+json"
@@ -184,5 +190,5 @@ export function StructuredData() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
     </>
-  )
+  );
 }

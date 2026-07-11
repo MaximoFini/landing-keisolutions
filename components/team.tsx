@@ -6,13 +6,6 @@ import { Linkedin } from "lucide-react"
 
 const coreMembers = [
   {
-    name: "Lautaro Aldasoro",
-    role: "Co-founder / Scrum Master",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Lautaro_Aldasoro-Izx7AbdHcLa5Q4iUCoedmy0D2g8Osa.png",
-    linkedin: "https://www.linkedin.com/in/lautaro-aldasoro-40a799198/",
-    bio: "Arquitecto de soluciones full-stack. Obsesionado con el rendimiento y la seguridad del sistema.",
-  },
-  {
     name: "Maximo Fini",
     role: "Co-founder / Product Manager",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Maximo_Fini-0HmiZcig2d8y2J5ZxZ2cC2E2ilN6RA.jpeg",

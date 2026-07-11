@@ -3,34 +3,42 @@
 // Más adelante puedes migrar esto a un CMS como Contentful, Sanity, o una base de datos
 
 export interface BlogPost {
-  slug: string
-  title: string
-  excerpt: string
-  content: string
-  date: string
-  readTime: string
-  category: string
-  featured: boolean
-  keywords: string[]
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  date: string;
+  readTime: string;
+  category: string;
+  featured: boolean;
+  keywords: string[];
   author: {
-    name: string
-    role: string
-  }
+    name: string;
+    role: string;
+  };
 }
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: 'como-integrar-ia-en-tu-negocio',
-    title: 'Cómo Integrar IA en tu Negocio: Guía Práctica 2026',
-    excerpt: 'Descubre cómo las empresas están usando inteligencia artificial para automatizar procesos, mejorar la experiencia del cliente y aumentar la eficiencia.',
-    date: '2026-05-01',
-    readTime: '8 min',
-    category: 'Inteligencia Artificial',
+    slug: "como-integrar-ia-en-tu-negocio",
+    title: "Cómo Integrar IA en tu Negocio: Guía Práctica 2026",
+    excerpt:
+      "Descubre cómo las empresas están usando inteligencia artificial para automatizar procesos, mejorar la experiencia del cliente y aumentar la eficiencia.",
+    date: "2026-05-01",
+    readTime: "8 min",
+    category: "Inteligencia Artificial",
     featured: true,
-    keywords: ['IA', 'inteligencia artificial', 'automatización', 'ChatGPT', 'LLM', 'negocio'],
+    keywords: [
+      "IA",
+      "inteligencia artificial",
+      "automatización",
+      "ChatGPT",
+      "LLM",
+      "negocio",
+    ],
     author: {
-      name: 'Keii Solutions',
-      role: 'Equipo de Desarrollo',
+      name: "Keii Solutions",
+      role: "Equipo de Desarrollo",
     },
     content: `
 # Cómo Integrar IA en tu Negocio: Guía Práctica 2026
@@ -96,17 +104,25 @@ La IA es una herramienta, no una solución mágica. El éxito está en identific
     `,
   },
   {
-    slug: 'nextjs-vs-react-que-elegir',
-    title: 'Next.js vs React: ¿Qué Framework Elegir en 2026?',
-    excerpt: 'Comparamos Next.js y React puro para ayudarte a decidir cuál es la mejor opción para tu próximo proyecto web.',
-    date: '2026-04-28',
-    readTime: '6 min',
-    category: 'Desarrollo Web',
+    slug: "nextjs-vs-react-que-elegir",
+    title: "Next.js vs React: ¿Qué Framework Elegir en 2026?",
+    excerpt:
+      "Comparamos Next.js y React puro para ayudarte a decidir cuál es la mejor opción para tu próximo proyecto web.",
+    date: "2026-04-28",
+    readTime: "6 min",
+    category: "Desarrollo Web",
     featured: true,
-    keywords: ['Next.js', 'React', 'framework', 'desarrollo web', 'SSR', 'performance'],
+    keywords: [
+      "Next.js",
+      "React",
+      "framework",
+      "desarrollo web",
+      "SSR",
+      "performance",
+    ],
     author: {
-      name: 'Keii Solutions',
-      role: 'Equipo de Desarrollo',
+      name: "Keii Solutions",
+      role: "Equipo de Desarrollo",
     },
     content: `
 # Next.js vs React: ¿Qué Framework Elegir en 2026?
@@ -190,17 +206,25 @@ No hay respuesta incorrecta, pero Next.js ha evolucionado tanto que en 2026 es d
     `,
   },
   {
-    slug: 'automatizacion-procesos-empresariales',
-    title: '5 Procesos Empresariales que Debes Automatizar Ya',
-    excerpt: 'Identifica qué tareas están consumiendo tiempo innecesario en tu empresa y cómo automatizarlas de forma efectiva.',
-    date: '2026-04-25',
-    readTime: '7 min',
-    category: 'Automatización',
+    slug: "automatizacion-procesos-empresariales",
+    title: "5 Procesos Empresariales que Debes Automatizar Ya",
+    excerpt:
+      "Identifica qué tareas están consumiendo tiempo innecesario en tu empresa y cómo automatizarlas de forma efectiva.",
+    date: "2026-04-25",
+    readTime: "7 min",
+    category: "Automatización",
     featured: false,
-    keywords: ['automatización', 'productividad', 'workflows', 'Zapier', 'Make', 'n8n'],
+    keywords: [
+      "automatización",
+      "productividad",
+      "workflows",
+      "Zapier",
+      "Make",
+      "n8n",
+    ],
     author: {
-      name: 'Keii Solutions',
-      role: 'Equipo de Desarrollo',
+      name: "Keii Solutions",
+      role: "Equipo de Desarrollo",
     },
     content: `
 # 5 Procesos Empresariales que Debes Automatizar Ya
@@ -263,17 +287,24 @@ La automatización no es reemplazar personas: es liberarlas para trabajo de mayo
     `,
   },
   {
-    slug: 'mejores-practicas-desarrollo-software',
-    title: 'Mejores Prácticas de Desarrollo de Software a Medida',
-    excerpt: 'Descubre las metodologías y prácticas que usamos para garantizar calidad y transparencia en cada proyecto.',
-    date: '2026-04-20',
-    readTime: '10 min',
-    category: 'Desarrollo',
+    slug: "mejores-practicas-desarrollo-software",
+    title: "Mejores Prácticas de Desarrollo de Software a Medida",
+    excerpt:
+      "Descubre las metodologías y prácticas que usamos para garantizar calidad y transparencia en cada proyecto.",
+    date: "2026-04-20",
+    readTime: "10 min",
+    category: "Desarrollo",
     featured: false,
-    keywords: ['desarrollo software', 'metodología ágil', 'calidad', 'testing', 'CI/CD'],
+    keywords: [
+      "desarrollo software",
+      "metodología ágil",
+      "calidad",
+      "testing",
+      "CI/CD",
+    ],
     author: {
-      name: 'Keii Solutions',
-      role: 'Equipo de Desarrollo',
+      name: "Keii Solutions",
+      role: "Equipo de Desarrollo",
     },
     content: `
 # Mejores Prácticas de Desarrollo de Software a Medida
@@ -383,23 +414,29 @@ Estas prácticas nos permiten entregar en tiempo, presupuesto, y con calidad exc
 [Hablemos de tu proyecto](/#contacto).
     `,
   },
-]
+];
 
 // Utility functions
 export function getAllPosts(): BlogPost[] {
-  return blogPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  return blogPosts.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
 }
 
 export function getFeaturedPosts(): BlogPost[] {
-  return blogPosts.filter(post => post.featured)
+  return blogPosts.filter((post) => post.featured);
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
-  return blogPosts.find(post => post.slug === slug)
+  return blogPosts.find((post) => post.slug === slug);
 }
 
-export function getRelatedPosts(currentSlug: string, category: string, limit = 2): BlogPost[] {
+export function getRelatedPosts(
+  currentSlug: string,
+  category: string,
+  limit = 2,
+): BlogPost[] {
   return blogPosts
-    .filter(post => post.slug !== currentSlug && post.category === category)
-    .slice(0, limit)
+    .filter((post) => post.slug !== currentSlug && post.category === category)
+    .slice(0, limit);
 }
